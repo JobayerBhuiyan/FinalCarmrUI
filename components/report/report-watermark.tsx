@@ -17,7 +17,7 @@ export function ReportWatermark({ report }: ReportWatermarkProps) {
       <div className="flex items-center gap-4">
         <span className="flex items-center gap-1.5">
           <Lock className="h-3.5 w-3.5" />
-          This report is for {report.userEmail} • Sharing prohibited
+          This report is for {report.userEmail}
         </span>
       </div>
       <div className="flex items-center gap-4">
