@@ -41,7 +41,7 @@ export function HeroSection() {
             <VinInput onModeChange={handleModeChange} />
           </div>
 
-          <div className="mt-3 space-y-2">
+          <div className="mt-8 space-y-4">
             <TrustBadge />
             <SourcesLine />
           </div>
