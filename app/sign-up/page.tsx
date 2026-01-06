@@ -226,16 +226,16 @@ export default function SignUpPage() {
           )}
         </Button>
 
-        <div className="space-y-0.5 pt-0.5">
-          <p className="text-[9px] text-center text-muted-foreground px-0 leading-tight">
+        <div className="space-y-1 pt-0.5">
+          <p className="text-[10px] text-center text-muted-foreground px-0 leading-normal">
             By creating an account, you agree to our{" "}
             <Link href="/terms" className="underline hover:text-foreground font-medium">Terms of Service</Link>,{" "}
             <Link href="/privacy" className="underline hover:text-foreground font-medium">Privacy Policy</Link>, and{" "}
             <Link href="/refund-policy" className="underline hover:text-foreground font-medium">Refund Policy</Link>.
           </p>
 
-          <div className="flex items-center justify-center gap-2 text-[9px] text-muted-foreground bg-muted/30 py-0.5 rounded-lg border border-border/40">
-            <ShieldCheck className="h-2.5 w-2.5 text-green-600" />
+          <div className="flex items-center justify-center gap-2 text-[10px] text-muted-foreground bg-muted/40 py-1 rounded-lg border border-border/50">
+            <ShieldCheck className="h-3 w-3 text-green-600" />
             <span>{t.neverSellData}</span>
           </div>
         </div>
