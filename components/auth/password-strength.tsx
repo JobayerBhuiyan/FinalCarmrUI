@@ -53,7 +53,7 @@ export function PasswordStrength({ password = "" }: PasswordStrengthProps) {
     )
 
     return (
-        <div className="space-y-3">
+        <div className="space-y-1.5">
             <div className="flex gap-1 h-1 w-full overflow-hidden rounded-full bg-muted/30">
                 {[0, 1, 2, 3].map((index) => (
                     <div
@@ -64,9 +64,9 @@ export function PasswordStrength({ password = "" }: PasswordStrengthProps) {
                 ))}
             </div>
 
-            <div className="space-y-1.5">
-                <label className="text-xs font-medium text-foreground">Password requirements:</label>
-                <div className="grid grid-cols-2 gap-2">
+            <div className="space-y-0.5">
+                <label className="text-[10px] font-medium text-foreground">Password requirements:</label>
+                <div className="grid grid-cols-2 gap-1">
                     <Requirement met={requirements.minLength} text="10+ characters" />
                     <Requirement met={requirements.hasUppercase} text="Uppercase letter" />
                     <Requirement met={requirements.hasLowercase} text="Lowercase letter" />

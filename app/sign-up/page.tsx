@@ -130,7 +130,7 @@ export default function SignUpPage() {
           </Button>
         </div>
 
-        <div className="relative py-1.5">
+        <div className="relative py-1">
           <div className="absolute inset-0 flex items-center">
             <span className="w-full border-t" />
           </div>
@@ -139,8 +139,8 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 pb-2">
-          <div className="space-y-1.5">
+        <div className="grid grid-cols-2 gap-2 pb-1">
+          <div className="space-y-1">
             <Label htmlFor="fullName" className="text-xs">Username</Label>
             <Input
               id="fullName"
@@ -156,7 +156,7 @@ export default function SignUpPage() {
             </div>
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-1">
             <Label htmlFor="email" className="text-xs">Email</Label>
             <Input
               id="email"
@@ -175,7 +175,7 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <div className="space-y-1.5">
+        <div className="space-y-1">
           <Label htmlFor="password" className="text-xs">Password</Label>
           <PasswordInput
             id="password"
@@ -197,7 +197,7 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <div className="space-y-1.5">
+        <div className="space-y-1">
           <Label htmlFor="confirmPassword" className="text-xs">Confirm Password</Label>
           <PasswordInput
             id="confirmPassword"
@@ -215,7 +215,7 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <Button type="submit" className="w-full h-10 text-sm mt-1 mb-1" disabled={isPending}>
+        <Button type="submit" className="w-full h-10 text-sm mt-0.5 mb-1" disabled={isPending}>
           {isPending ? (
             <>
               <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />
