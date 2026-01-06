@@ -103,19 +103,17 @@ export default function SignUpPage() {
       }
     >
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-1">
-        <div className="min-h-[40px] flex items-center justify-center">
-          {serverError && (
-            <div className="w-full rounded-md bg-destructive/15 p-2 text-xs text-destructive font-medium border border-destructive/20 text-center">
-              {serverError}
-            </div>
-          )}
-        </div>
+        {serverError && (
+          <div className="mb-3 w-full rounded-md bg-destructive/15 p-2 text-xs text-destructive font-medium border border-destructive/20 text-center">
+            {serverError}
+          </div>
+        )}
 
         <div className="grid grid-cols-2 gap-3">
           <Button
             variant="outline"
             type="button"
-            className="w-full h-10 text-xs sm:text-sm font-medium bg-background text-foreground border-input dark:bg-zinc-950 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-foreground hover:border-input transition-colors"
+            className="w-full h-10 text-xs font-medium bg-background text-foreground border-input dark:bg-zinc-950 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-foreground hover:border-input transition-colors"
             disabled={isPending}
           >
             <Icons.google className="mr-2 h-4 w-4" />
@@ -124,7 +122,7 @@ export default function SignUpPage() {
           <Button
             variant="outline"
             type="button"
-            className="w-full h-10 text-xs sm:text-sm font-medium bg-background text-foreground border-input dark:bg-zinc-950 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-foreground hover:border-input transition-colors"
+            className="w-full h-10 text-xs font-medium bg-background text-foreground border-input dark:bg-zinc-950 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-foreground hover:border-input transition-colors"
             disabled={isPending}
           >
             <Icons.apple className="mr-2 h-4 w-4" />
@@ -132,7 +130,7 @@ export default function SignUpPage() {
           </Button>
         </div>
 
-        <div className="relative py-2">
+        <div className="relative py-3">
           <div className="absolute inset-0 flex items-center">
             <span className="w-full border-t" />
           </div>
@@ -141,11 +139,11 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 pb-2">
+        <div className="grid grid-cols-2 gap-3 pb-1">
           <div className="space-y-1">
             <Label htmlFor="fullName" className="text-xs">{t.fullNameLabel}</Label>
             <Input id="fullName" placeholder="John Doe" className="h-10 text-sm" disabled={isPending} {...form.register("fullName")} />
-            {/* Reserve space for consistency even if no validation on name yet */}
+            {/* Reserve space */}
             <div className="min-h-[14px]" />
           </div>
 
@@ -179,7 +177,7 @@ export default function SignUpPage() {
             error={!!form.formState.errors.password}
             {...form.register("password")}
           />
-          <div className="min-h-[18px] py-1">
+          <div className="min-h-[16px] py-0.5">
             <PasswordStrength password={passwordValue} />
           </div>
 
@@ -208,7 +206,7 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <Button type="submit" className="w-full h-11 text-base mt-3" disabled={isPending}>
+        <Button type="submit" className="w-full h-11 text-sm mt-2 mb-1" disabled={isPending}>
           {isPending ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -219,16 +217,12 @@ export default function SignUpPage() {
           )}
         </Button>
 
-        <div className="space-y-3 pt-2">
-          <p className="text-xs text-center text-muted-foreground px-4 leading-normal">
-            By creating an account, you agree to our{" "}
-            <Link href="/terms" className="underline hover:text-foreground font-medium">Terms of Service</Link>,{" "}
-            <Link href="/privacy" className="underline hover:text-foreground font-medium">Privacy Policy</Link>, and{" "}
-            <Link href="/refund-policy" className="underline hover:text-foreground font-medium">Refund Policy</Link>.
+        <div className="pt-2">
+          <p className="text-[10px] text-center text-muted-foreground px-0 leading-tight">
+            By creating an account, you agree to our <Link href="/terms" className="underline hover:text-foreground">Terms</Link>, <Link href="/privacy" className="underline hover:text-foreground">Privacy</Link>, & <Link href="/refund-policy" className="underline hover:text-foreground">Refund Policy</Link>.
           </p>
-
-          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground bg-muted/40 py-2 rounded-lg border border-border/50">
-            <ShieldCheck className="h-3.5 w-3.5 text-green-600" />
+          <div className="mt-2 flex items-center justify-center gap-1.5 text-[10px] text-muted-foreground/80">
+            <ShieldCheck className="h-3 w-3 text-green-600/80" />
             <span>{t.neverSellData}</span>
           </div>
         </div>

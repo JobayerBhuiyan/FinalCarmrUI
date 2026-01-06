@@ -15,35 +15,20 @@ interface AuthCardProps {
 
 export function AuthCard({ title, description, children, footer, showLogo = true, breadcrumb }: AuthCardProps) {
     return (
-        <div className="min-h-screen bg-background flex flex-col">
-            <div className="w-full max-w-[500px] mx-auto px-4 pt-4 sm:px-0">
-                <nav className="flex items-center text-sm font-medium text-muted-foreground">
-                    <Link
-                        href="/"
-                        className="hover:text-foreground transition-colors"
-                    >
-                        Home
-                    </Link>
-                    {breadcrumb && (
-                        <>
-                            <span className="mx-2">›</span>
-                            <span className="text-foreground">{breadcrumb}</span>
-                        </>
-                    )}
-                </nav>
-            </div>
+        <div className="min-h-[100dvh] bg-background flex flex-col justify-center">
+            {/* Breadcrumb removed to save vertical space */}
 
-            <div className="flex-1 flex items-center justify-center p-4 sm:p-6">
-                <div className="w-full max-w-[500px] space-y-4">
+            <div className="w-full max-w-[500px] mx-auto p-4">
+                <div className="w-full max-w-[500px] space-y-2">
                     {showLogo && (
                         <div className="flex justify-center">
                             <Link href="/">
                                 <Image
                                     src="/images/carMR-logo-cropped.png"
                                     alt="CarMR"
-                                    width={160}
-                                    height={32}
-                                    className="h-8 w-auto"
+                                    width={130}
+                                    height={26}
+                                    className="h-6 w-auto"
                                     priority
                                 />
                             </Link>
@@ -51,12 +36,12 @@ export function AuthCard({ title, description, children, footer, showLogo = true
                     )}
 
                     <Card className="border-border/50 shadow-sm">
-                        <CardHeader className="space-y-1 text-center">
-                            <CardTitle className="text-2xl">{title}</CardTitle>
+                        <CardHeader className="space-y-1 text-center py-3">
+                            <CardTitle className="text-xl">{title}</CardTitle>
                             {description && <CardDescription>{description}</CardDescription>}
                         </CardHeader>
-                        <CardContent>{children}</CardContent>
-                        {footer && <div className="px-6 pb-6 pt-0 text-center text-sm text-muted-foreground">{footer}</div>}
+                        <CardContent className="px-5 pb-3">{children}</CardContent>
+                        {footer && <div className="px-4 pb-4 pt-2 text-center text-xs text-muted-foreground">{footer}</div>}
                     </Card>
                 </div>
             </div>
