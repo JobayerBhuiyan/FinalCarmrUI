@@ -15,17 +15,17 @@ export function HeroSection() {
 
   return (
     <section className="relative overflow-hidden border-b border-border bg-background">
-      <div className="mx-auto max-w-7xl px-4 pt-6 pb-12 sm:px-6 sm:pt-10 sm:pb-16 lg:px-8 lg:pt-12 lg:pb-20">
+      <div className="mx-auto max-w-7xl px-4 pt-4 pb-6 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8 lg:pt-10 lg:pb-12">
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex flex-col items-center justify-center">
             <p className="text-sm font-medium uppercase tracking-wider text-primary">{t.proVehicleHistory}</p>
-            <h1 className="mt-2 text-4xl font-extrabold tracking-tight leading-[1.1] sm:text-5xl lg:text-6xl max-w-[18ch] mx-auto [text-wrap:balance] min-h-[2.5em] flex items-center justify-center">
+            <h1 className="mt-2 text-3xl font-extrabold tracking-tight leading-[1.1] sm:text-4xl lg:text-5xl mx-auto [text-wrap:balance] min-h-[2.5em] flex items-center justify-center">
               {mode === "vin" ? t.knowBeforeYouBuy : t.knowBeforeYouBuyPlate}
             </h1>
             <p className="mt-2 text-lg text-foreground/80 text-balance sm:text-xl font-medium">{t.heroSubtitle}</p>
           </div>
 
-          <div className="mt-4 sm:mt-6 lg:mt-8 flex justify-center">
+          <div className="mt-2 sm:mt-6 lg:mt-6 flex justify-center">
             <VinInput onModeChange={handleModeChange} />
           </div>
 
