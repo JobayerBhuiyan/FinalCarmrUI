@@ -24,10 +24,10 @@ export function HeroSection() {
               <AnimatePresence mode="wait">
                 <motion.span
                   key={mode}
-                  initial={{ opacity: 0, y: 5, filter: "blur(8px)" }}
+                  initial={{ opacity: 0, y: 8, filter: "blur(10px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: -5, filter: "blur(8px)" }}
-                  transition={{ duration: 0.02, ease: "easeOut" }}
+                  exit={{ opacity: 0, y: -8, filter: "blur(10px)" }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
                   className="block"
                 >
                   {mode === "vin" ? t.knowBeforeYouBuy : t.knowBeforeYouBuyPlate}
