@@ -152,7 +152,7 @@ export function VinInput({ className, onModeChange }: VinInputProps) {
           </TabsTrigger>
         </TabsList>
 
-        <div className="min-h-[200px]">
+        <div className="min-h-[220px]">
           <TabsContent value="vin" className="mt-0 space-y-3">
             <div className="relative">
               <Input
